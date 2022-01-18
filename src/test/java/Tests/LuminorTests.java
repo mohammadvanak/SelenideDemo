@@ -36,6 +36,6 @@ public class LuminorTests {
 		  ElementsCollection inputFields= $$(By.className("control-input-input"));
 		  String iBuyTextvalue=inputFields.get(2).getAttribute("value");
 		  System.out.println(iBuyTextvalue);
-		  String pngFileName = screenshot("currencyRates.png");
+		  String pngFileName = screenshot("currencyRates");
 	}
 }
