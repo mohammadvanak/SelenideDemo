@@ -1,6 +1,7 @@
 package Tests;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.codeborne.selenide.Configuration;
@@ -14,6 +15,7 @@ import java.io.IOException;
 import java.util.List;
 
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.screenshot;
 
 public class LuminorTests {
 	
@@ -34,5 +36,6 @@ public class LuminorTests {
 		  ElementsCollection inputFields= $$(By.className("control-input-input"));
 		  String iBuyTextvalue=inputFields.get(2).getAttribute("value");
 		  System.out.println(iBuyTextvalue);
+		  String pngFileName = screenshot("currencyRates.png");
 	}
 }

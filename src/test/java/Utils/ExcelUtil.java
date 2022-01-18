@@ -1,6 +1,7 @@
 package Utils;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -31,7 +32,7 @@ public class ExcelUtil {
 	    XSSFSheet Sheet = Workbook.getSheet(sheetName);
 
 	    int rowCount = Sheet.getLastRowNum()-Sheet.getFirstRowNum();
-	    List<String> data=null;
+	    List<String> data=new ArrayList<String>();
 	    DataFormatter formatter = new DataFormatter();
 	    for (int i = 1; i < rowCount+1; i++) {
 
